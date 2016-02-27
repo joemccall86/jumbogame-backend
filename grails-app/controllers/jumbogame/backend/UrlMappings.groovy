@@ -9,6 +9,10 @@ class UrlMappings {
             }
         }
 
+        "/games"(resources: 'game') {
+            "/scores"(resources: 'score')
+        }
+
         "/"(controller: 'application', action:'index')
         "500"(view: '/error')
         "404"(view: '/notFound')
